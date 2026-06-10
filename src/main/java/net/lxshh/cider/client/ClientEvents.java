@@ -1,4 +1,4 @@
-package net.lxshh.modtemplate.client;
+package net.lxshh.cider.client;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;

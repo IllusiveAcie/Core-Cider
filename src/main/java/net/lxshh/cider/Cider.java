@@ -1,10 +1,10 @@
-package net.lxshh.modtemplate;
+package net.lxshh.cider;
 
-import net.lxshh.modtemplate.client.ClientEvents;
-import net.lxshh.modtemplate.config.ClientConfig;
-import net.lxshh.modtemplate.config.CommonConfig;
-import net.lxshh.modtemplate.config.ServerConfig;
-import net.lxshh.modtemplate.registry.*;
+import net.lxshh.cider.client.ClientEvents;
+import net.lxshh.cider.config.ClientConfig;
+import net.lxshh.cider.config.CommonConfig;
+import net.lxshh.cider.config.ServerConfig;
+import net.lxshh.cider.registry.*;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
@@ -15,15 +15,15 @@ import com.mojang.logging.LogUtils;
 import net.neoforged.fml.loading.FMLEnvironment;
 import org.slf4j.Logger;
 
-@Mod(ExampleMod.MOD_ID)
-public class ExampleMod {
+@Mod(Cider.MOD_ID)
+public class Cider {
     public static final String MOD_ID = "examplemod";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public ExampleMod(IEventBus modEventBus, ModContainer container) {
-        ModBlocks.BLOCKS.register(modEventBus);
-        ModItems.ITEMS.register(modEventBus);
-        ModComponents.COMPONENT.register(modEventBus);
+    public Cider(IEventBus modEventBus, ModContainer container) {
+        CiderBlocks.BLOCKS.register(modEventBus);
+        CiderItems.ITEMS.register(modEventBus);
+        CiderComponents.COMPONENT.register(modEventBus);
 
         container.registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC);
         container.registerConfig(ModConfig.Type.SERVER, ServerConfig.SPEC);

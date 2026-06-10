@@ -1,8 +1,8 @@
-package net.lxshh.modtemplate.config;
+package net.lxshh.cider.config;
 
 import net.neoforged.neoforge.common.ModConfigSpec;
 
-public class ClientConfig {
+public class ServerConfig {
     public static final ModConfigSpec SPEC;
 
     static {

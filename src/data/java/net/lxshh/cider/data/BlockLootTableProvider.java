@@ -1,6 +1,6 @@
-package net.lxshh.modtemplate.data;
+package net.lxshh.cider.data;
 
-import net.lxshh.modtemplate.registry.ModBlocks;
+import net.lxshh.cider.registry.CiderBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
@@ -22,7 +22,7 @@ public class BlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return ModBlocks.BLOCKS.getEntries().stream()
+        return CiderBlocks.BLOCKS.getEntries().stream()
                 .map(DeferredHolder::get)
                 .collect(Collectors.toSet());
     }

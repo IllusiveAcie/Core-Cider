@@ -1,4 +1,4 @@
-package net.lxshh.modtemplate.data;
+package net.lxshh.cider.data;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;

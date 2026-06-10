@@ -1,14 +1,14 @@
-package net.lxshh.modtemplate.registry;
+package net.lxshh.cider.registry;
 
-import net.lxshh.modtemplate.ExampleMod;
+import net.lxshh.cider.Cider;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-public class ModItems {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ExampleMod.MOD_ID);
+public class CiderItems {
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Cider.MOD_ID);
 
     private static <T extends Item> DeferredItem<T> register(String name, Supplier<T> itemFactory) {
         return ITEMS.register(name, itemFactory);

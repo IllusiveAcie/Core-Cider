@@ -1,6 +1,6 @@
-package net.lxshh.modtemplate.data;
+package net.lxshh.cider.data;
 
-import net.lxshh.modtemplate.ExampleMod;
+import net.lxshh.cider.Cider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -20,6 +20,6 @@ public class ItemTagProvider extends ItemTagsProvider {
 
     @Override
     public String getName() {
-        return ExampleMod.MOD_ID  + "Item Tags";
+        return Cider.MOD_ID  + "Item Tags";
     }
 }

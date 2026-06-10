@@ -1,7 +1,2 @@
-# Addon Template
-
-Addon template for my TFC related Mods.
-
-## Documentation
-
-## Download
+# CiderCore
+- Feature for the Cider Modpack

@@ -1,6 +1,6 @@
-package net.lxshh.modtemplate.data;
+package net.lxshh.cider.data;
 
-import net.lxshh.modtemplate.ExampleMod;
+import net.lxshh.cider.Cider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
@@ -11,7 +11,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class BlockTagProvider extends BlockTagsProvider {
     public BlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, ExampleMod.MOD_ID, existingFileHelper);
+        super(output, lookupProvider, Cider.MOD_ID, existingFileHelper);
     }
 
     @Override

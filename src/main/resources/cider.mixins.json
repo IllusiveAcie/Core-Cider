@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.lxshh.modtemplate.mixin",
+  "package": "net.lxshh.cider.mixin",
   "mixins": [],
   "injectors": {
     "defaultRequire": 1
