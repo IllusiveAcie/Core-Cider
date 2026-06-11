@@ -2,9 +2,15 @@
   "required": true,
   "minVersion": "0.8",
   "package": "net.lxshh.cider.mixin",
-  "mixins": [],
+  "mixins": [
+    "PotBlockEntityMixin"
+  ],
+  "client": [
+    "client.CreateWorldScreenMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },
-  "refmap": "examplemod.refmap.json"
+  "refmap": "examplemod.refmap.json",
+  "compatibilityLevel": "JAVA_21"
 }

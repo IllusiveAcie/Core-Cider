@@ -4,6 +4,8 @@ import net.lxshh.cider.client.ClientEvents;
 import net.lxshh.cider.config.ClientConfig;
 import net.lxshh.cider.config.CommonConfig;
 import net.lxshh.cider.config.ServerConfig;
+import net.lxshh.cider.event.CiderEventHandler;
+import net.lxshh.cider.event.CiderNeoEventHandler;
 import net.lxshh.cider.registry.*;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -17,7 +19,7 @@ import org.slf4j.Logger;
 
 @Mod(Cider.MOD_ID)
 public class Cider {
-    public static final String MOD_ID = "examplemod";
+    public static final String MOD_ID = "cider";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public Cider(IEventBus modEventBus, ModContainer container) {
@@ -32,6 +34,9 @@ public class Cider {
         if (FMLEnvironment.dist == Dist.CLIENT) {
             ClientEvents.init(container, modEventBus);
         }
+
+        CiderNeoEventHandler.init();
+        CiderEventHandler.init(modEventBus);
     }
 
     public static ResourceLocation loc(String name) {

@@ -124,13 +124,9 @@ dependencies {
     compileOnly "vazkii.patchouli:Patchouli:${patchouli_version}:api"
     runtimeOnly "vazkii.patchouli:Patchouli:${patchouli_version}"
 
-    // JEI
-    // compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
-    // runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
-
     // EMI
     // compileOnly "dev.emi:emi-neoforge:${emi_version}:api"
-    // runtimeOnly "dev.emi:emi-neoforge:${emi_version}"
+    runtimeOnly "dev.emi:emi-neoforge:${emi_version}"
 
     // Jade
     // implementation "maven.modrinth:jade:${jade_version}"
