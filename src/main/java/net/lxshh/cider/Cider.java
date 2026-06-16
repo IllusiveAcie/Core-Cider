@@ -24,8 +24,12 @@ public class Cider {
 
     public Cider(IEventBus modEventBus, ModContainer container) {
         CiderBlocks.BLOCKS.register(modEventBus);
+        CiderBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         CiderItems.ITEMS.register(modEventBus);
-        CiderComponents.COMPONENT.register(modEventBus);
+        CiderComponents.COMPONENTS.register(modEventBus);
+        CiderRecipeTypes.RECIPE_TYPES.register(modEventBus);
+        CiderRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
+        CiderMenuTypes.MENU_TYPES.register(modEventBus);
 
         container.registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC);
         container.registerConfig(ModConfig.Type.SERVER, ServerConfig.SPEC);

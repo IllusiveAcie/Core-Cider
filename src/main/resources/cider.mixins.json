@@ -11,6 +11,6 @@
   "injectors": {
     "defaultRequire": 1
   },
-  "refmap": "examplemod.refmap.json",
+  "refmap": "cider.refmap.json",
   "compatibilityLevel": "JAVA_21"
 }
