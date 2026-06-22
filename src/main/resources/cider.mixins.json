@@ -3,7 +3,9 @@
   "minVersion": "0.8",
   "package": "net.lxshh.cider.mixin",
   "mixins": [
-    "PotBlockEntityMixin"
+    "HopperBlockEntityMixin",
+    "PotBlockEntityMixin",
+    "AxleNodeMixin"
   ],
   "client": [
     "client.CreateWorldScreenMixin"

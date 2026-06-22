@@ -125,7 +125,7 @@ dependencies {
     runtimeOnly "vazkii.patchouli:Patchouli:${patchouli_version}"
 
     // EMI
-    // compileOnly "dev.emi:emi-neoforge:${emi_version}:api"
+    compileOnly "dev.emi:emi-neoforge:${emi_version}:api"
     runtimeOnly "dev.emi:emi-neoforge:${emi_version}"
 
     // Jade
