@@ -3,7 +3,10 @@ package net.lxshh.cider.event;
 import net.dries007.tfc.common.effect.TFCEffects;
 import net.dries007.tfc.common.items.TFCShieldItem;
 import net.dries007.tfc.common.player.IPlayerInfo;
+import net.lxshh.cider.common.data.CiderDataManagers;
+import net.lxshh.cider.common.data.nutrition.NutritionEffect;
 import net.lxshh.cider.common.recipe.BlockApplicationRecipe;
+import net.lxshh.cider.network.CiderDataManagerSyncPacket;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.player.Player;
@@ -14,18 +17,41 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.AddReloadListenerEvent;
+import net.neoforged.neoforge.event.OnDatapackSyncEvent;
 import net.neoforged.neoforge.event.entity.living.LivingShieldBlockEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 public class CiderNeoEventHandler {
 
     public static void init() {
         final IEventBus bus = NeoForge.EVENT_BUS;
 
+        bus.addListener(CiderNeoEventHandler::onPlayerTickPost);
+        bus.addListener(CiderNeoEventHandler::addReloadListeners);
+        bus.addListener(CiderNeoEventHandler::onDataPackSync);
         bus.addListener(EventPriority.HIGHEST, CiderNeoEventHandler::onShieldBlock);
         bus.addListener(CiderNeoEventHandler::onPlayerClone);
         bus.addListener(CiderNeoEventHandler::onRightClick);
+    }
+
+    public static void onPlayerTickPost(PlayerTickEvent.Post event) {
+        NutritionEffect.nutritionEffectTick(event.getEntity());
+    }
+
+    public static void addReloadListeners(AddReloadListenerEvent event) {
+        CiderDataManagers.REGISTRY.forEach(event::addListener);
+    }
+
+    public static void onDataPackSync(OnDatapackSyncEvent event) {
+        if (event.getPlayer() == null) {
+            PacketDistributor.sendToAllPlayers(new CiderDataManagerSyncPacket());
+        } else {
+            PacketDistributor.sendToPlayer(event.getPlayer(), new CiderDataManagerSyncPacket());
+        }
     }
 
     public static void onRightClick(PlayerInteractEvent.RightClickBlock event) {

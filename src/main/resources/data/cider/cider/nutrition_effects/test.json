@@ -1,0 +1,29 @@
+{
+  "nutrients": [
+    {
+      "nutrient": "protein",
+      "above": 0.2
+    },
+    {
+      "nutrient": "grain",
+      "above": 0.1
+    }
+  ],
+  "mob_effects" : [
+    {
+      "effect": "minecraft:strength",
+      "amplifier" : 1
+    },
+    {
+      "effect": "minecraft:regeneration",
+      "amplifier" : 1
+    }
+  ],
+  "attributes": [
+    {
+      "attribute": "minecraft:generic.movement_speed",
+      "amount": 2.0,
+      "operation" : "add_value"
+    }
+  ]
+}

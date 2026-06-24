@@ -1,6 +1,7 @@
 package net.lxshh.cider;
 
 import net.lxshh.cider.client.ClientEvents;
+import net.lxshh.cider.common.data.CiderDataManagers;
 import net.lxshh.cider.config.ClientConfig;
 import net.lxshh.cider.config.CommonConfig;
 import net.lxshh.cider.config.ServerConfig;
@@ -30,6 +31,7 @@ public class Cider {
         CiderRecipeTypes.RECIPE_TYPES.register(modEventBus);
         CiderRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
         CiderMenuTypes.MENU_TYPES.register(modEventBus);
+        CiderDataManagers.DATA_MANAGERS.register(modEventBus);
 
         container.registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC);
         container.registerConfig(ModConfig.Type.SERVER, ServerConfig.SPEC);
