@@ -1,8 +1,6 @@
-package net.lxshh.cider.mixin;
+package net.lxshh.cider.mixin.common.minecraft;
 
 import net.dries007.tfc.common.blockentities.TFCChestBlockEntity;
-import net.dries007.tfc.common.component.size.ItemSizeManager;
-import net.dries007.tfc.config.TFCConfig;
 import net.lxshh.cider.common.container.RestrictedHopperMenu;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.item.ItemEntity;

@@ -1,4 +1,4 @@
-package net.lxshh.cider.mixin;
+package net.lxshh.cider.mixin.common.tfc;
 
 import net.dries007.tfc.util.rotation.AxleNode;
 import org.spongepowered.asm.mixin.Mixin;

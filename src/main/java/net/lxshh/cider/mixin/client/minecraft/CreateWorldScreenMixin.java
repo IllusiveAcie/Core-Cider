@@ -1,7 +1,7 @@
 /**
  * Derived from TerraFirmaGreg-Modern Core
  */
-package net.lxshh.cider.mixin.client;
+package net.lxshh.cider.mixin.client.minecraft;
 
 import net.dries007.tfc.TerraFirmaCraft;
 import net.minecraft.client.gui.components.CycleButton;

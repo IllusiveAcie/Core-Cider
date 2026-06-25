@@ -3,12 +3,12 @@
   "minVersion": "0.8",
   "package": "net.lxshh.cider.mixin",
   "mixins": [
-    "HopperBlockEntityMixin",
-    "PotBlockEntityMixin",
-    "AxleNodeMixin"
+    "common.tfc.AxleNodeMixin",
+    "common.minecraft.HopperBlockEntityMixin",
+    "common.tfc.PotBlockEntityMixin"
   ],
   "client": [
-    "client.CreateWorldScreenMixin"
+    "client.minecraft.CreateWorldScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
