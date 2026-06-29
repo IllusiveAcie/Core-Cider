@@ -52,6 +52,9 @@ public class CiderEventHandler {
         event.modify(TFCItems.METAL_ITEMS.get(Metal.HIGH_CARBON_BLACK_STEEL).get(Metal.ItemType.INGOT).get(), builder -> builder.set(DataComponents.FIRE_RESISTANT, Unit.INSTANCE));
         event.modify(TFCItems.METAL_ITEMS.get(Metal.HIGH_CARBON_BLUE_STEEL).get(Metal.ItemType.INGOT).get(), builder -> builder.set(DataComponents.FIRE_RESISTANT, Unit.INSTANCE));
         event.modify(TFCItems.METAL_ITEMS.get(Metal.HIGH_CARBON_RED_STEEL).get(Metal.ItemType.INGOT).get(), builder -> builder.set(DataComponents.FIRE_RESISTANT, Unit.INSTANCE));
+
+        event.modify(TFCItems.RED_STEEL_BUCKET.get(), builder -> builder.set(DataComponents.FIRE_RESISTANT, Unit.INSTANCE));
+        event.modify(TFCItems.BLUE_STEEL_BUCKET.get(), builder -> builder.set(DataComponents.FIRE_RESISTANT, Unit.INSTANCE));
     }
 
 }
