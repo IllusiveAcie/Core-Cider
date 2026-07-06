@@ -3,8 +3,9 @@
   "minVersion": "0.8",
   "package": "net.lxshh.cider.mixin",
   "mixins": [
-    "common.tfc.AxleNodeMixin",
     "common.minecraft.HopperBlockEntityMixin",
+    "common.tfc.AxleNodeMixin",
+    "common.tfc.PlantBlockMixin",
     "common.tfc.PotBlockEntityMixin"
   ],
   "client": [
