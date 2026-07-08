@@ -4,6 +4,7 @@
   "package": "net.lxshh.cider.mixin",
   "mixins": [
     "common.minecraft.HopperBlockEntityMixin",
+    "common.tfc.AxeLoggingMixin",
     "common.tfc.AxleNodeMixin",
     "common.tfc.PlantBlockMixin",
     "common.tfc.PotBlockEntityMixin"
