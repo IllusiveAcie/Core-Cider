@@ -6,6 +6,7 @@ import net.dries007.tfc.common.recipes.outputs.ItemStackModifierType;
 import net.dries007.tfc.common.recipes.outputs.ItemStackModifiers;
 import net.lxshh.cider.Cider;
 import net.lxshh.cider.common.recipe.outputs.AttachItemModifier;
+import net.lxshh.cider.common.recipe.outputs.RepairItemModifier;
 import net.lxshh.cider.common.recipe.outputs.UnwrapAttachedModifier;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
@@ -16,6 +17,7 @@ import java.util.function.Supplier;
 public class CiderItemStackModifiers {
     public static final DeferredRegister<ItemStackModifierType<?>> MODIFIER_TYPES = DeferredRegister.create(ItemStackModifiers.KEY, Cider.MOD_ID);
 
+    public static final Supplier<ItemStackModifierType<RepairItemModifier>> REPAIR_ITEM = register("repair_item", RepairItemModifier.CODEC, RepairItemModifier.STREAM_CODEC);
     public static final Supplier<ItemStackModifierType<AttachItemModifier>> ATTACH_ITEM = register("attach_items", AttachItemModifier.CODEC, AttachItemModifier.STREAM_CODEC);
     public static final Supplier<ItemStackModifierType<UnwrapAttachedModifier>> UNWRAP_ITEM = register("unwrap_items", UnwrapAttachedModifier.INSTANCE);
 
