@@ -1,0 +1,23 @@
+package net.lxshh.cider.registry;
+
+import net.lxshh.cider.Cider;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+
+public class CiderTags {
+    public static class Items {
+
+        public static TagKey<Item> create(String path) {
+            return TagKey.create(Registries.ITEM, Cider.identifier(path));
+        }
+    }
+
+    public static class Blocks {
+
+        public static TagKey<Block> create(String path) {
+            return TagKey.create(Registries.BLOCK, Cider.identifier(path));
+        }
+    }
+}
