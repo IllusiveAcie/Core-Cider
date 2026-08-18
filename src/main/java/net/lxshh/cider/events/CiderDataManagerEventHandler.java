@@ -1,4 +1,4 @@
-package net.lxshh.cider.event;
+package net.lxshh.cider.events;
 
 import net.lxshh.cider.Cider;
 import net.lxshh.cider.network.CiderDataManagerSyncPacket;
@@ -13,7 +13,7 @@ import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import net.neoforged.neoforge.registries.NewRegistryEvent;
 
 @EventBusSubscriber(modid = Cider.MOD_ID)
-public class CiderEventHandler {
+public class CiderDataManagerEventHandler {
 
     @SubscribeEvent
     public static void onNewRegistry(NewRegistryEvent event) {

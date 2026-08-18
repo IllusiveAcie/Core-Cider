@@ -3,7 +3,9 @@
   "minVersion": "0.8",
   "package": "net.lxshh.cider.mixin",
   "mixins": [],
-  "client": [],
+  "client": [
+    "client.minecraft.DeathScreenMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },
