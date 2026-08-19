@@ -24,16 +24,16 @@ public class DataProviders {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
+        generator.addProvider(event.includeServer(), new LangProvider(packOutput));
+
         generator.addProvider(event.includeClient(), new BlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new ItemModelProvider(packOutput, existingFileHelper));
 
         generator.addProvider(event.includeServer(), new RecipeProvider(packOutput, lookupProvider));
 
         generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
-                        List.of(new LootTableProvider.SubProviderEntry(BlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider)
-        );
-        generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
-                        List.of(new LootTableProvider.SubProviderEntry(EntityLootTableProvider::new, LootContextParamSets.ENTITY)), lookupProvider)
+                        List.of(new LootTableProvider.SubProviderEntry(BlockLootTableProvider::new, LootContextParamSets.BLOCK),
+                                new LootTableProvider.SubProviderEntry(EntityLootTableProvider::new, LootContextParamSets.ENTITY)), lookupProvider)
         );
 
         BlockTagProvider blockTagProvider = new BlockTagProvider(packOutput, lookupProvider, existingFileHelper);
