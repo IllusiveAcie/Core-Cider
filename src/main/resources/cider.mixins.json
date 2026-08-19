@@ -2,10 +2,11 @@
   "required": true,
   "minVersion": "0.8",
   "package": "net.lxshh.cider.mixin",
-  "mixins": [],
-  "client": [
-    "client.minecraft.DeathScreenMixin"
+  "mixins": [
+    "common.minecraft.DispenserBlockEntityMixin",
+    "common.minecraft.HopperBlockEntityMixin"
   ],
+  "client": [],
   "injectors": {
     "defaultRequire": 1
   },
