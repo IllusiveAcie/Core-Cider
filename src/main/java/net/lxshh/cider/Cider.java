@@ -33,8 +33,4 @@ public class Cider {
         // container.registerConfig(ModConfig.Type.CLIENT, ClientConfig.SPEC);
     }
 
-    public static ResourceLocation identifier(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
-    }
-
 }

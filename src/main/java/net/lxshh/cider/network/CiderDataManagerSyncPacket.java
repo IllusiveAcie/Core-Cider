@@ -3,6 +3,7 @@ package net.lxshh.cider.network;
 import net.dries007.tfc.util.data.DataManager;
 import net.lxshh.cider.Cider;
 import net.lxshh.cider.registry.CiderDataManagers;
+import net.lxshh.cider.util.CiderHelpers;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
@@ -15,7 +16,7 @@ import java.util.Map;
 
 public record CiderDataManagerSyncPacket(List<Entry<?>> values) implements CustomPacketPayload {
 
-    public static final CustomPacketPayload.Type<CiderDataManagerSyncPacket> TYPE = new Type<>(Cider.identifier("data_managers"));
+    public static final CustomPacketPayload.Type<CiderDataManagerSyncPacket> TYPE = new Type<>(CiderHelpers.identifier("data_managers"));
     public static final StreamCodec<RegistryFriendlyByteBuf, CiderDataManagerSyncPacket> CODEC = ByteBufCodecs.registry(CiderDataManagers.KEY)
             .<Entry<?>>dispatch(Entry::manager, CiderDataManagerSyncPacket::streamCodec)
             .apply(ByteBufCodecs.list())
