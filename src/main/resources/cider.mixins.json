@@ -4,7 +4,10 @@
   "package": "net.lxshh.cider.mixin",
   "mixins": [
     "common.minecraft.DispenserBlockEntityMixin",
-    "common.minecraft.HopperBlockEntityMixin"
+    "common.minecraft.HopperBlockEntityMixin",
+    "common.tfc.AxleNodeMixin",
+    "common.tfc.PlantBlockMixin",
+    "common.tfc.PotBlockEntityMixin"
   ],
   "client": [],
   "injectors": {
