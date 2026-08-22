@@ -39,7 +39,6 @@ public class CiderEventHandler {
             event.cancelWithResult(result);
         }
 
-        event.setCanceled(true);
     }
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)

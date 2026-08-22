@@ -2,6 +2,7 @@ package net.lxshh.cider.registry;
 
 import net.lxshh.cider.Cider;
 import net.lxshh.cider.common.recipe.BlockInteractionRecipe;
+import net.lxshh.cider.common.recipe.ShapelessStackableCraftingRecipe;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -13,6 +14,8 @@ public class CiderRecipeSerializers {
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(Registries.RECIPE_SERIALIZER, Cider.MOD_ID);
 
     public static final Supplier<RecipeSerializer<BlockInteractionRecipe>> BLOCK_INTERACTION = register("block_interaction", BlockInteractionRecipe.Serializer::new);
+
+    public static final Supplier<RecipeSerializer<ShapelessStackableCraftingRecipe>> SHAPELESS_STACKABLE = register("shapeless_stackable", ShapelessStackableCraftingRecipe.Serializer::new);
 
     private static <T extends Recipe<?>> Supplier<RecipeSerializer<T>> register(String name, Supplier<RecipeSerializer<T>> recipeFactory) {
         return RECIPE_SERIALIZERS.register(name, recipeFactory);
