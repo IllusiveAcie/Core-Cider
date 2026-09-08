@@ -1,12 +1,11 @@
 package net.lxshh.cider;
 
+import com.mojang.logging.LogUtils;
 import net.lxshh.cider.config.ServerConfig;
 import net.lxshh.cider.registry.*;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
-import net.minecraft.resources.ResourceLocation;
-import com.mojang.logging.LogUtils;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import org.slf4j.Logger;
 
@@ -27,6 +26,7 @@ public class Cider {
         CiderRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
         CiderRecipeTypes.RECIPE_TYPES.register(modEventBus);
         CiderDataManagers.DATA_MANAGERS.register(modEventBus);
+        CiderAttachments.ATTACHMENTS.register(modEventBus);
 
         // container.registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC);
          container.registerConfig(ModConfig.Type.SERVER, ServerConfig.SPEC);

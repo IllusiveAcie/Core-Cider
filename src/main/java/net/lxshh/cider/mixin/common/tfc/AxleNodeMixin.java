@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 public class AxleNodeMixin {
 
     /**
-     * Extend TFC's axle length to 12 which is a reasonable length
+     * Extend TFC's axle length to 12
      */
     @ModifyConstant(
             method = "update",

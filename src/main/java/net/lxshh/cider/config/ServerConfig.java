@@ -9,11 +9,15 @@ public class ServerConfig {
     public static final ModConfigSpec.EnumValue<Size> hopperMaximumItemSize;
     public static final ModConfigSpec.EnumValue<Size> dispenserMaximumItemSize;
 
+    public static final ModConfigSpec.BooleanValue resetHungerOnDeath;
+
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
 
         hopperMaximumItemSize = builder.comment("The largest (inclusive) size of an item that is allowed in a hopper.").defineEnum("chestMaximumItemSize", Size.LARGE);
         dispenserMaximumItemSize = builder.comment("The largest (inclusive) size of an item that is allowed in a dispenser.").defineEnum("dispenserMaximumItemSize", Size.LARGE);
+
+        resetHungerOnDeath = builder.comment("Whether the player's hunger, saturation and thirst reset when the player respawns").define("resetHungerOnDeath", false);
 
         SPEC = builder.build();
     }

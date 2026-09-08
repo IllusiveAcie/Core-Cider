@@ -1,7 +1,5 @@
 package net.lxshh.cider.common.container;
 
-import net.dries007.tfc.common.blockentities.TFCChestBlockEntity;
-import net.dries007.tfc.common.component.size.ItemSizeDefinition;
 import net.dries007.tfc.common.component.size.ItemSizeManager;
 import net.lxshh.cider.config.ServerConfig;
 import net.lxshh.cider.registry.CiderMenuTypes;

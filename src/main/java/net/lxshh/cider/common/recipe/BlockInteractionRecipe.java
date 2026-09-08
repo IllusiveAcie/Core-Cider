@@ -10,7 +10,6 @@ import net.dries007.tfc.util.collections.IndirectHashCollection;
 import net.dries007.tfc.world.Codecs;
 import net.lxshh.cider.registry.CiderRecipeSerializers;
 import net.lxshh.cider.registry.CiderRecipeTypes;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;

@@ -19,6 +19,10 @@ public class CiderHelpers {
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
     }
 
+    public static ResourceLocation identifierCommon(String path) {
+        return ResourceLocation.fromNamespaceAndPath("c", path);
+    }
+
     public static ItemInteractionResult blockInteractionRecipe(Player player, Level level, BlockState stateIn, BlockPos pos) {
         if (!player.blockPosition().equals(pos)) {
             ItemStack stack = player.getItemInHand(player.getUsedItemHand());

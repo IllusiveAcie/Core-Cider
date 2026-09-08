@@ -11,6 +11,6 @@ public class LangProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-
+        add("cider.component.item_damaged", "%s took %d damage.");
     }
 }
