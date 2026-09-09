@@ -21,13 +21,11 @@ public class ItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        tag(Items.KEPT_ON_DEATH)
-                .addTag(Tags.Items.ARMORS)
-                .addTag(Tags.Items.TOOLS);
+
     }
 
     @Override
     public String getName() {
-        return Cider.MOD_ID  + "Item Tags";
+        return Cider.MOD_ID  + " Item Tags";
     }
 }
